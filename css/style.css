@@ -73,6 +73,10 @@ a:active {
   text-align: center;
 }
 
+.main h2 {
+  text-align: center;
+}
+
 /* Footer */
 .footer {
   display: grid;
