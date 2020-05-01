@@ -1,0 +1,96 @@
+/* Tipografía */
+@font-face {
+  font-family: "nb_akademie";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2322424/regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "nb_akademie_medium";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2322424/medium.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --font-family: "nb_akademie";
+  --font-family-medium: "nb_akademie_medium";
+}
+
+/****************************************
+*    Base - Elements
+*****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--black);
+  background: var(--white);
+  font-size: 100%;
+  font-size: calc(16px + (20 - 16) * ((100vw - 720px) / (1400 - 720)));
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active {
+  opacity: 0.7;
+}
+
+/****************************************
+*    Components - Common
+*****************************************/
+/* Layout */
+.container {
+  height: 100%;
+  max-height: 100vh;
+}
+
+/* Menu */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 50vw;
+  margin: 1em auto 0;
+}
+
+.menu ~ p {
+  margin-top: 0.2em;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  position: relative;
+  height: 5vh;
+}
+
+.footer a {
+  align-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/****************************************
+*    Helpers
+*****************************************/
+/* Ayuda visual temporal */
+.outline {
+  border: 2px dotted blue;
+}
