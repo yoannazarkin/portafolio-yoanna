@@ -51,6 +51,13 @@ a:active {
   opacity: 0.7;
 }
 
+a,
+p,
+h1,
+h2 {
+  font-size: 12px;
+}
+
 /****************************************
 *    Components - Common
 *****************************************/
@@ -64,7 +71,7 @@ a:active {
 .menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  max-width: 50vw;
+  max-width: 40vw;
   margin: 1em auto 0;
 }
 
@@ -73,7 +80,26 @@ a:active {
   text-align: center;
 }
 
+.main {
+  position: relative;
+}
+
 .main h2 {
+  margin-top: 3em;
+  text-align: center;
+}
+
+/*
+.arrow-right {
+  position: absolute;
+  max-width: 120px;
+  right: 0;
+  top: 250px;
+}
+*/
+
+.swipe {
+  display: block;
   text-align: center;
 }
 
@@ -81,7 +107,7 @@ a:active {
 .footer {
   display: grid;
   position: relative;
-  height: 5vh;
+  height: 1vh;
 }
 
 .footer a {
@@ -89,6 +115,17 @@ a:active {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+  bottom: 0;
+  margin-bottom: -3.8em;
+}
+
+/* Contacto */
+.container.contacto {
+  background: peru;
+}
+
+.contacto-container {
+  min-height: 80vh;
 }
 
 /****************************************
