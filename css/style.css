@@ -156,6 +156,130 @@ h2 {
 }
 
 /****************************************
+*   Slider
+*****************************************/
+.slider {
+  display: flex;
+  justify-content: center;
+}
+
+.imagenes {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imagen {
+  position: absolute;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  transition: all 0.6s;
+  transform: translatex(-200%);
+}
+
+.imagen.next + .imagen {
+  transform: translatex(200%);
+}
+
+.imagen.anterior {
+  z-index: 10;
+  transform: translatex(-100%);
+}
+
+.imagen.actual {
+  z-index: 10;
+  transform: translatex(0);
+}
+
+.slide.siguiente {
+  z-index: 10;
+  transform: translatex(100%);
+}
+
+@media screen and (max-width: 40em) {
+  button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .slider {
+    display: flex;
+    max-width: max-content;
+    margin: 10vh auto 0;
+  }
+
+  .imagenes {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    order: 2;
+  }
+
+  .imagen {
+    position: absolute;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.6s;
+    transform: translatex(-200%);
+  }
+
+  .imagen.next + .imagen {
+    transform: translatex(200%);
+  }
+
+  .imagen.anterior {
+    z-index: 10;
+    transform: translatex(-100%);
+  }
+
+  .imagen.actual {
+    z-index: 10;
+    transform: translatex(0);
+  }
+
+  .slide.siguiente {
+    z-index: 10;
+    transform: translatex(100%);
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  button.anterior {
+    margin-right: 20vw;
+  }
+
+  button.siguiente {
+    margin-left: 20vw;
+  }
+
+  button:hover {
+    opacity: 0.5;
+  }
+
+  button:first-child {
+    order: 1;
+  }
+
+  button:last-child {
+    order: 3;
+    transform: rotate(180deg);
+  }
+}
+/****************************************
 *    Helpers
 *****************************************/
 /* Ayuda visual temporal */
