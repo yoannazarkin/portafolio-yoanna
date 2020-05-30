@@ -88,6 +88,7 @@ h2 {
 }
 
 .slider {
+  position: relative;
   margin-top: 3em;
   max-width: 90vw;
 }
@@ -164,16 +165,16 @@ h2 {
 *   Slider
 *****************************************/
 .slider {
-  display: flex;
-  justify-content: center;
+  z-index: 1;
 }
 
 .imagenes {
+  position: relative;
   width: 380px;
   height: 480px;
-  position: relative;
   margin: 0 auto;
   overflow: hidden;
+  transform: translatex(-4px);
 }
 
 .imagen {
@@ -199,6 +200,25 @@ h2 {
   z-index: 10;
   transform: translatex(0);
 }
+
+.anterior,
+.siguiente {
+  z-index: 10;
+  position: absolute;
+  opacity: 0;
+  min-width: 190px;
+  min-height: 480px;
+  transform: translateY(-480px);
+}
+
+.anterior {
+  left: 0;
+}
+
+.siguiente {
+  right: 0;
+}
+
 /*
 .imagen.actual[data-nombre="Preludios"]::after {
   content: "";
@@ -211,12 +231,17 @@ h2 {
   transform: translatex(100%);
 }
 
+/*
 @media screen and (max-width: 40em) {
+  .slider {
+    z-index: 1;
+  }
+
   button {
-    display: none;
+    z-index: 10;
   }
 }
-
+*/
 @media screen and (min-width: 40em) {
   .slider {
     display: flex;
@@ -293,84 +318,3 @@ h2 {
 /****************************************
 *    Helpers
 *****************************************/
-/* Ayuda visual temporal */
-.outline {
-  border: 2px dotted blue;
-}
-
-/****************************************
-*    Helpers
-*****************************************/
-@media screen and (max-width: 40em) {
-  .showcase {
-    position: relative;
-    width: 380px;
-    height: 480px;
-    background: url(../assets/images/preludios.jpg);
-    animation: change-bg 20s linear infinite;
-    transition: 1s;
-  }
-
-  @keyframes change-bg {
-    0% {
-      background: url(../assets/images/done/1.png);
-    }
-    5% {
-      background: url(../assets/images/done/2.jpg);
-    }
-    10% {
-      background: url(../assets/images/done/3.png);
-    }
-    20% {
-      background: url(../assets/images/done/4.png);
-    }
-    25% {
-      background: url(../assets/images/done/5.jpg);
-    }
-    30% {
-      background: url(../assets/images/done/6.png);
-    }
-    35% {
-      background: url(../assets/images/done/7.png);
-    }
-    40% {
-      background: url(../assets/images/done/8.jpg);
-    }
-    45% {
-      background: url(../assets/images/done/9.jpg);
-    }
-    50% {
-      background: url(../assets/images/done/10.jpg);
-    }
-    55% {
-      background: url(../assets/images/done/11.jpg);
-    }
-    60% {
-      background: url(../assets/images/done/12.jpg);
-    }
-    65% {
-      background: url(../assets/images/done/13.jpg);
-    }
-    70% {
-      background: url(../assets/images/done/14.jpg);
-    }
-    75% {
-      background: url(../assets/images/done/15.jpg);
-    }
-    80% {
-      background: url(../assets/images/done/166.jpg);
-    }
-    85% {
-      background: url(../assets/images/done/17.jpg);
-    }
-    90% {
-      background: url(../assets/images/done/18.jpg);
-    }
-    95% {
-      background: url(../assets/images/done/19.jpg);
-    }
-    100% {
-      background: url(../assets/images/done/19.jpg);
-    }
-  }
-}
