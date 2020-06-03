@@ -38,6 +38,7 @@ body {
   font-size: 100%;
   font-size: calc(16px + (20 - 16) * ((100vw - 720px) / (1400 - 720)));
   font-family: var(--font-family);
+  overflow-y: hidden;
 }
 
 a {
@@ -288,7 +289,6 @@ button.anterior {
   height: 90vh;
   min-width: calc(100vw / 2);
   top: 0;
-  border: 1px solid red;
 }
 
 button.siguiente {
@@ -297,7 +297,6 @@ button.siguiente {
   min-width: calc(100vw / 2);
   top: 0;
   border: none;
-  border: 1px solid blue;
 }
 
 @media screen and (min-width: 40em) {
@@ -306,7 +305,6 @@ button.siguiente {
     height: 90vh;
     min-width: calc(100vw / 2);
     top: 0;
-    border: 1px solid blue;
   }
 
   button.siguiente {
