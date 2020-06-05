@@ -21,7 +21,7 @@
 :root {
   --white: #ffffff;
   --black: #000000;
-  --font-family: "nb_akademie";
+  --font-family: "nb_akademie_medium";
   --font-family-medium: "nb_akademie_medium";
 }
 
@@ -56,7 +56,7 @@ a,
 p,
 h1,
 h2 {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 button {
@@ -77,33 +77,47 @@ button {
   min-width: 100vw;
 }
 
+.home {
+  max-height: 100vh;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
 nav {
   z-index: 20;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   display: flex;
   max-width: max-content;
   margin: 0 auto;
-  padding-top: 1em;
+  /* padding-top: 1em;*/
 }
 
 .menu ~ p {
-  margin-top: 0.2em;
+  /*  margin-top: 0.2em;*/
   text-align: center;
 }
 
 .main {
+  margin-top: 3em;
   display: grid;
   grid-template-rows: auto 1fr;
   justify-items: center;
-  margin: 3em auto 0;
+  /* max-height: 90vh; */
+  /* margin: 1em auto;*/
 }
 
 .slider {
   position: relative;
-  margin-top: 3em;
-  max-width: 90vw;
+  margin: auto;
+  padding-top: 1em;
+  /* max-width: 90vw; */
 }
 
 /* Temporal */
@@ -126,7 +140,7 @@ nav {
 
 .footer {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px; /* Instagram */
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -238,6 +252,9 @@ nav {
 }
 
 @media screen and (min-width: 40em) {
+  .main {
+    margin-top: 0;
+  }
   .slider {
     margin: auto;
   }
@@ -285,14 +302,14 @@ nav {
 *****************************************/
 button.anterior {
   transform: translate(-4vw, 1vh);
-  height: 90vh;
+  height: 50vh;
   min-width: calc(100vw / 2);
   top: 0;
 }
 
 button.siguiente {
   transform: translate(12vw, 1vh);
-  height: 90vh;
+  height: 50vh;
   min-width: calc(100vw / 2);
   top: 0;
   border: none;
@@ -307,7 +324,7 @@ button.siguiente {
   }
 
   button.siguiente {
-    transform: translate(-27.25vw, 1vh);
+    transform: translate(27.25vw, 1vh);
     height: 90vh;
     min-width: calc(100vw / 2);
     top: 0;
