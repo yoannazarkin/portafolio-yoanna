@@ -111,7 +111,7 @@ nav {
 
 .slider {
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   /* padding-top: 1em;*/
   /* max-width: 90vw; */
 }
